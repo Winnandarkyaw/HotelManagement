@@ -40,7 +40,7 @@ public class JWTUtils {
     {
         return claimsTFunction.apply(Jwts.parser().verifyWith(Key).build().parseSignedClaims(token).getPayload());
     }
-    public boolean iValidToken(String token,UserDetails userDetails){
+    public boolean isValidToken(String token,UserDetails userDetails){
         final String username=extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
@@ -48,5 +48,6 @@ public class JWTUtils {
     {
         return extractClaims(token,Claims::getExpiration).before(new Date());
     }
+
 }
 //"843567893696976453275974432697R634976R738467TR678T34865R6834R8763T478378637664538745673865783678548735687R3";
