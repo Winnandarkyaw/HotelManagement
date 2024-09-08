@@ -1,17 +1,19 @@
 package com.winy.WinyHotel.controller;
 
 import com.winy.WinyHotel.dto.Response;
+import com.winy.WinyHotel.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
     @Autowired
-    private IUserService userService;
+    private UserService userService;
 
 
     @GetMapping("/all")

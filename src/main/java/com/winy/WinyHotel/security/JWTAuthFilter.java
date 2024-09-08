@@ -1,6 +1,5 @@
 package com.winy.WinyHotel.security;
 
-import com.winy.WinyHotel.repo.UserRepository;
 import com.winy.WinyHotel.service.CustomUserDetailsService;
 import com.winy.WinyHotel.utils.JWTUtils;
 import jakarta.servlet.FilterChain;
@@ -8,7 +7,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.CachingUserDetailsService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
