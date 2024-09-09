@@ -1,10 +1,11 @@
-const FooterComponent=()=>{
-   return(
+const FooterComponent = () => {
+  return (
     <footer>
-        <spam className="my-footer">
-            Winvy Hotel | All Rights &copy; {new Date().getFullYear()}
-        </spam>
+      <span className="my-footer">
+        Winvy Hotel | All Rights &copy; {new Date().getFullYear()}
+      </span>
     </footer>
-   )
-}
+  );
+};
+
 export default FooterComponent;
