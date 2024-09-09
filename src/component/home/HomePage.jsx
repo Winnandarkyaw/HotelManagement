@@ -1,5 +1,11 @@
 import React,{useState} from "react";
+import RoomSearch from "../common/RoomSearch";
+import RoomResult from "../common/RoomResult";
 const HomePage =()=>{
+  const [roomSearchResults,setRoomSearchResults]=useState([]);
+  const handleSearchResult=(results)=>{
+    setRoomSearchResults(results);
+  };
     return (
       <div className="home">
         <section>
@@ -19,6 +25,9 @@ const HomePage =()=>{
             </div>
           </header>
         </section>
+
+        <RoomSearch handleSearchResult={handleSearchResult}/>
+        <RoomResult roomSearchResults={roomSearchResults}/>
         {/*SERVICES SECTION*/}
         <section className="service-section">
           <div className="service-card">

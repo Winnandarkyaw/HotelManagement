@@ -16,11 +16,13 @@ function Navbar() {
   };
   return (
     <div>
-      <nav>
-        <div></div>
-        <ul>
+      <nav className="navbar">
+        <div className="navbar-brand">
+            <NavLink to="/home">Winvy Hotel</NavLink>
+        </div>
+        <ul className="navbar-ul">
           <li>
-            <NavLink to="/home" activeClass="active">
+            <NavLink to="/home" activeclassname="active">
               Home
             </NavLink>
           </li>
